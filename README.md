@@ -69,5 +69,23 @@
 1.1 Coding Style 
 - [Bad style](https://valeriyalukovkina.github.io/learn-js/2.CodeQuality/CodingStyle/task1.html);
 
-1.1 Automated testing with Mocha
+1.2 Automated testing with Mocha
 - [What's wrong in the test?](https://valeriyalukovkina.github.io/learn-js/2.CodeQuality/AutomatedTesting/task1.html);
+
+# 3.Objects: the basics
+1.1 Objects
+- [Hello, object](https://valeriyalukovkina.github.io/learn-js/3.Objects/Objects/task1.html);
+- [Check for emptiness](https://valeriyalukovkina.github.io/learn-js/3.Objects/Objects/task2.html);
+- [Objects-const](https://valeriyalukovkina.github.io/learn-js/3.Objects/Objects/task3.html);
+- [Sum object properties](https://valeriyalukovkina.github.io/learn-js/3.Objects/Objects/task4.html);
+- [Multiply numeric property values by 2](https://valeriyalukovkina.github.io/learn-js/3.Objects/Objects/task5.html);
+
+1.2 Object methods, "this"
+- [Using "this" in object literal](https://valeriyalukovkina.github.io/learn-js/3.Objects/ObjectMethods/task1.html);
+- [Create a calculator](https://valeriyalukovkina.github.io/learn-js/3.Objects/ObjectMethods/task2.html);
+- [Chaining](https://valeriyalukovkina.github.io/learn-js/3.Objects/ObjectMethods/task3.html);
+
+1.3 Constructor, operator "new"
+- [Two functions – one object](https://valeriyalukovkina.github.io/learn-js/3.Objects/Constructor/task1.html);
+- [Create new Calculator](https://valeriyalukovkina.github.io/learn-js/3.Objects/Constructor/task2.html);
+- [Create new Accumulator](https://valeriyalukovkina.github.io/learn-js/3.Objects/Constructor/task3.html);

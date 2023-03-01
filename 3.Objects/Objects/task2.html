@@ -14,8 +14,18 @@
         Объекты
     </h2>
     <p>
-        2. Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+        2. Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.<br/>
+        Должно работать так:
     </p>
+    <pre><code>
+        let schedule = {};
+
+        alert( isEmpty(schedule) ); // true
+
+        schedule["8:30"] = "get up";
+
+        alert( isEmpty(schedule) ); // false
+    </code></pre>
     <script>
         function isEmpty (obj) {
             for (let key in obj) {
