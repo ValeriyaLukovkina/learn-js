@@ -17,6 +17,11 @@
         8. Какие из перечисленных ниже alert выполнятся?<br/>
         Какие конкретно значения будут результатами выражений в условиях if(...)?
     </p>
+    <pre><code>
+        if (-1 || 0) alert( 'first' );
+        if (-1 && 0) alert( 'second' );
+        if (null || -1 && 1) alert( 'third' );
+    </code></pre>
     <script>
         if (-1 || 0) alert('first');
         if (-1 && 0) alert('second');

@@ -21,7 +21,15 @@
         Используя оператор ?<br/>
         Используя оператор ||
     </p>
-    
+    <pre><code>
+        function checkAge(age) {
+            if (age > 18) {
+              return true;
+            } else {
+              return confirm('Родители разрешили?');
+            }
+          }
+    </code></pre>
     <script>
         let age = +prompt('Введите возраст!');
         
