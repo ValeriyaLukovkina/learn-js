@@ -64,3 +64,10 @@
 
 1.11 Arrow functions, the basics
 - [Rewrite with arrow functions](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/ArrowFunctions/task1.html);
+
+# 2.Code quality
+1.1 Coding Style 
+- [Bad style](https://valeriyalukovkina.github.io/learn-js/2.CodeQuality/CodingStyle/task1.html);
+
+1.1 Automated testing with Mocha
+- [What's wrong in the test?](https://valeriyalukovkina.github.io/learn-js/2.CodeQuality/AutomatedTesting/task1.html);

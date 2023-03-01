@@ -16,7 +16,31 @@
     <p>
         1. Какие недостатки вы видите в стиле написания кода этого примера?
     </p>
-    <p>Ответ в консоли</p>
+    <pre><code>
+        function pow(x,n)
+        {
+            let result=1;
+            for(let i=0;i&lt;n;i++) {result*=x;}
+            return result;
+        }
+
+        let x=prompt(&quot;x?&quot;,&lsquo;&lsquo;), n=prompt(&quot;n?&quot;,&lsquo;&lsquo;)
+        if (n&lt;=0)
+        {
+            alert(`Степень ${n} не поддерживается, введите целую степень, большую 0`);
+        }
+        else
+        {
+        alert(pow(x,n))
+        }
+    </code></pre>
+    <p>Ответ</p>
+    <ol>
+        <li>Во многих местах скобки на новых строчках</li>
+        <li>Результат условия лучше вынести на другую строку</li>
+        <li>Отдельные запросы лучше на новых строчках</li>
+        <li>Много где нет пробелов</li>
+    </ol>
     <script>
         function pow(x, n) {
             let result = 1;
