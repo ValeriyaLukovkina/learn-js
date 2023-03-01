@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Object Methods. Task 3</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Методы объекта, "this"
+    </h2>
+    <p>
+        3. У нас есть объект ladder (лестница), который позволяет подниматься и спускаться:<br/>
+        Теперь, если нам нужно выполнить несколько последовательных вызовов, мы можем сделать это так:<br />
+        Измените код методов up, down и showStep таким образом, чтобы их вызов можно было сделать по цепочке, например так:<br />
+        mul() (умножить) перемножает сохранённые значения и возвращает результат.<br/>
+        ladder.up().up().down().showStep().down().showStep(); // показывает 1 затем 0
+    </p>
+    <script>
+        let ladder = {
+            step: 0,
+            up() {
+                this.step++;
+                return this;
+            },
+            down() {
+                this.step--;
+                return this;
+
+            },
+            showStep: function () { // показывает текущую ступеньку
+                alert(this.step);
+                return this;
+            }
+        };
+        ladder.up().up().down().showStep().down().showStep();
+    </script>
+</body>
+
+</html>

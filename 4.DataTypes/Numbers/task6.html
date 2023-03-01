@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers. Task 6</title>
+</head>
+
+<body>
+    <h1>
+        Типы данных
+    </h1>
+    <h2>
+        Числа
+    </h2>
+    <p>
+        6. Напишите функцию randomInteger(min, max), которая генерирует случайное целое (integer) число от min до max (включительно).</br>
+        Любое число из интервала min..max должно появляться с одинаковой вероятностью.
+    </p>
+    <script>
+        function randomInteger(min, max) {
+            let randomNum = Math.random() * (max - min + 1) + min;
+            return Math.floor(randomNum);
+        }
+        alert(randomInteger(1, 5));
+        alert(randomInteger(1, 5));
+        alert(randomInteger(1, 5));
+    </script>
+</body>
+
+</html>

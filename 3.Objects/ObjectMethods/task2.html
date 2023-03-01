@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Object Methods. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Методы объекта, "this"
+    </h2>
+    <p>
+        2. Создайте объект calculator (калькулятор) с тремя методами:
+    </p>
+    <ul>
+        <li>read() (читать) запрашивает два значения и сохраняет их как свойства объекта.</li>
+        <li>sum() (суммировать) возвращает сумму сохранённых значений.</li>
+        <li>mul() (умножить) перемножает сохранённые значения и возвращает результат.</li>
+    </ul>
+    <script>
+        let calculator = {
+            read() {
+                this.a = +prompt('Введите число a');
+                this.b = +prompt('Введите число b');
+            },
+            sum() {
+                return this.a + this.b;
+            },
+            mul() {
+                return this.a * this.b;
+            }
+        };
+
+        calculator.read();
+        alert("Sum = " + calculator.sum());
+        alert("Mul = " + calculator.mul());
+    </script>
+</body>
+
+</html>

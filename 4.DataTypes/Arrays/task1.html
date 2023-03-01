@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Типы данных
+    </h1>
+    <h2>
+        Массивы
+    </h2>
+    <p>
+        1. Что выведет следующий код?
+    </p>
+    <code>
+        let fruits = ["Яблоки", "Груша", "Апельсин"];</br>
+        let shoppingCart = fruits;</br>
+        shoppingCart.push("Банан");</br>
+        alert(fruits.length);
+    </code>
+    <p>Ответ: 4. Так как обе переменные это ссылки на один и тот же массив</p>
+    <script>
+        let fruits = ["Яблоки", "Груша", "Апельсин"];
+
+        let shoppingCart = fruits;
+        shoppingCart.push("Банан");
+
+        alert(fruits.length);
+        console.log('Ответ: 4. Так как обе переменные это ссылки на один и тот же массив');
+    </script>
+</body>
+
+</html>

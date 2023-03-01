@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays. Task 4</title>
+</head>
+
+<body>
+    <h1>
+        Типы данных
+    </h1>
+    <h2>
+        Массивы
+    </h2>
+    <p>
+        4. Напишите функцию sumInput(), которая:
+    </p>
+    <ul>
+        <li>Просит пользователя ввести значения, используя prompt и сохраняет их в массив.</li>
+        <li>Заканчивает запрашивать значения, когда пользователь введёт не числовое значение, пустую строку или нажмёт «Отмена».</li>
+        <li>Подсчитывает и возвращает сумму элементов массива.</li>
+    </ul>
+    <p>
+        P.S. Ноль 0 – считается числом, не останавливайте ввод значений при вводе «0».
+    </p>
+    <script>
+        function sumInput() {
+            let numbers = [];
+            while (true) {
+                let val = prompt('Введите число');
+                if (val === null || val === '' || !isFinite(val)) {
+                    break;
+                }
+                numbers.push(+val);
+            }
+
+            let sum = 0;
+            for (let num of numbers) {
+                sum += num;
+            }
+            return sum;
+        }
+
+        alert(sumInput());
+    </script>
+</body>
+
+</html>

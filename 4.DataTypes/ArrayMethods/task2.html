@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array methods. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Методы массивов
+    </h2>
+    <p>
+        2. Напишите функцию filterRange(arr, a, b), которая принимает массив arr, ищет элементы со значениями больше или равными a и меньше или равными b и возвращает результат в виде массива.</br>
+        Функция должна возвращать новый массив и не изменять исходный.
+    </p>
+    <script>
+        function filterRange(arr, a, b) {
+            let newArr = arr.filter(elem => {
+                return elem >= a && elem <= b
+            })
+            return newArr
+        }
+        let arr = [5, 3, 8, 1];
+        let filtered = filterRange(arr, 1, 4);
+        alert(filtered);
+        alert(arr);
+    </script>
+</body>
+
+</html>

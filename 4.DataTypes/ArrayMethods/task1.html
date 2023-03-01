@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array methods. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Методы массивов
+    </h2>
+    <p>
+        1. Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».</br>
+        То есть дефисы удаляются, а все слова после них получают заглавную букву.
+    </p>
+    <script>
+        function camelize(str) {
+            let arr = str.split('-');
+            let newArr = arr.map(function (word, i) {
+                if (i == 0) {
+                    return word
+                } else {
+                    return word[0].toUpperCase() + word.slice(1);
+                }
+            });
+            let newStr = newArr.join('');
+            return newStr;
+        }
+        alert(camelize("background-color"));
+        alert(camelize("list-style-image"));
+        alert(camelize("-webkit-transition"));
+    </script>
+</body>
+
+</html>

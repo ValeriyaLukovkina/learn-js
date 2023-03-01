@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Object Methods. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Методы объекта, "this"
+    </h2>
+    <p>
+        1. Здесь функция makeUser возвращает объект.<br/>
+        Каким будет результат при обращении к свойству объекта ref? Почему?
+    </p>
+    <code>
+        function makeUser() {<br/>
+            return {<br/>
+              name: "John",<br/>
+              ref: this<br/>
+            };<br/>
+          }<br/>
+          let user = makeUser();<br/>
+          alert( user.ref.name ); 
+    </code>
+    <p>
+        Будет выводиться ошибка. Происходит это потому что обращение к user идет через функцию и this становится равным undefined
+    </p>
+    <script>
+        function makeUser() {
+            return {
+                name: "John",
+                ref: this
+            };
+        }
+
+        let user = makeUser();
+
+        alert(user.ref.name);
+
+        //Будет выводиться ошибка. Происходит это потому что обращение к user идет через функцию и this становится равным undefined
+    </script>
+</body>
+
+</html>

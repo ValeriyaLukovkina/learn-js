@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Strings. Task 4</title>
+</head>
+
+<body>
+    <h1>
+        Типы данных
+    </h1>
+    <h2>
+        Строки
+    </h2>
+    <p>
+        4. Есть стоимость в виде строки "$120". То есть сначала идёт знак валюты, а затем – число.</br>
+        Создайте функцию extractCurrencyValue(str), которая будет из такой строки выделять числовое значение и возвращать его.
+    </p>
+    <script>
+        const extractCurrencyValue = (str) => {
+            return Number(str.slice(1));
+        }
+
+        alert(extractCurrencyValue('$120') === 120);
+    </script>
+</body>
+
+</html>

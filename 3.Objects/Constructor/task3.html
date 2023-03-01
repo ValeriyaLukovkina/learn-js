@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor. Task 3</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Объекты
+    </h2>
+    <p>
+        3. Создайте функцию-конструктор Accumulator(startingValue).</br>
+        Объект, который она создаёт, должен уметь следующее:
+    </p>
+    <ul>
+        <li>Хранить «текущее значение» в свойстве value. Начальное значение устанавливается в аргументе конструктора startingValue.</li>
+        <li>Метод read() должен использовать prompt для считывания нового числа и прибавления его к value.</li>
+    </ul>
+    <p>
+        Другими словами, свойство value представляет собой сумму всех введённых пользователем значений, с учётом начального значения startingValue.
+    </p>
+    <script>
+        function Accumulator(startingValue) {
+            this.value = startingValue,
+                this.read = () => {
+                    let num = +prompt('Введите число!')
+                    this.value += num
+                }
+        }
+        let accumulator = new Accumulator(1);
+
+        accumulator.read();
+        accumulator.read();
+
+        alert(accumulator.value);
+    </script>
+</body>
+
+</html>

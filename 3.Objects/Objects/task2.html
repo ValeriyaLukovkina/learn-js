@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Objects. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Объекты
+    </h2>
+    <p>
+        2. Напишите функцию isEmpty(obj), которая возвращает true, если у объекта нет свойств, иначе false.
+    </p>
+    <script>
+        function isEmpty (obj) {
+            for (let key in obj) {
+                return false;
+            }
+            return true;
+        }
+
+        let schedule = {};
+
+        alert(isEmpty(schedule));
+
+        schedule["8:30"] = "get up";
+
+        alert(isEmpty(schedule));
+    </script>
+</body>
+
+</html>

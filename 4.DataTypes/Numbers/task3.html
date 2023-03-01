@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Numbers. Task 3</title>
+</head>
+
+<body>
+    <h1>
+        Типы данных
+    </h1>
+    <h2>
+        Числа
+    </h2>
+    <p>
+        3. Создайте функцию readNumber, которая будет запрашивать ввод числового значения до тех пор, пока посетитель его не введёт.</br>
+        Функция должна возвращать числовое значение.</br>
+        Также надо разрешить пользователю остановить процесс ввода, отправив пустую строку или нажав «Отмена». В этом случае функция должна вернуть null.
+    </p>
+    <script>
+        function readNumber() {
+            let a = +prompt('a?', '');
+            while (isNaN(a)) {
+
+                if (a === null || a === '') {
+                    return null;
+                }
+                a = +prompt('a?', '');
+            }
+            return a
+        }
+        readNumber()
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Objects. Task 5</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Объекты
+    </h2>
+    <p>
+        5. Создайте функцию multiplyNumeric(obj), которая умножает все числовые свойства объекта obj на 2.<br/>
+        Обратите внимание, что multiplyNumeric не нужно ничего возвращать. Следует напрямую изменять объект.
+    </p>
+    <p>
+        Ответ в консоли
+    </p>
+    <script>
+        function multiplyNumeric (obj) {
+            for (let key in obj) {
+                if (typeof obj[key] === 'number') {
+                    obj[key] *= 2;
+                }
+            }
+        }
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+
+        multiplyNumeric(menu);
+
+        console.log(menu)
+    
+    </script>
+</body>
+
+</html>

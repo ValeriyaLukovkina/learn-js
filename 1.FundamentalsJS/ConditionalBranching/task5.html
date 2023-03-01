@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conditional Branching. Task 5</title>
+</head>
+
+<body>
+    <h1>
+        Основы JavaScript
+    </h1>
+    <h2>
+        Условное ветвление: if, '?'
+    </h2>
+    <p>
+        5. Перепишите if..else с использованием нескольких операторов '?'.<br/>
+        Для читаемости рекомендуется разбить код на несколько строк.
+    </p>
+    <script>
+        let login = prompt('Введите логин (Сотрудник, Директор)')
+        let message;
+        message = (login == 'Сотрудник') ? 'Привет' :
+            (login == 'Директор') ? 'Здравствуйте' :
+            (login == '') ? 'Нет логина' : '';
+        alert(message)
+    </script>
+</body>
+
+</html>

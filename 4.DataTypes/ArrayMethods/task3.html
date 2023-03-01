@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array methods. Task 3</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Методы массивов
+    </h2>
+    <p>
+        3. Напишите функцию filterRangeInPlace(arr, a, b), которая принимает массив arr и удаляет из него все значения кроме тех, которые находятся между a и b. То есть, проверка имеет вид a ≤ arr[i] ≤ b.</br>
+        Функция должна изменять принимаемый массив и ничего не возвращать.
+    </p>
+    <script>
+        function filterRangeInPlace(arr, a, b) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] < a || arr[i] > b) {
+                    arr.splice(i, 1);
+                    i--;
+                }
+            }
+        }
+
+        let arr = [5, 3, 8, 1];
+        filterRangeInPlace(arr, 1, 4);
+        alert(arr);
+    </script>
+</body>
+
+</html>

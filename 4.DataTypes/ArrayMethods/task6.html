@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array methods. Task 6</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Методы массивов
+    </h2>
+    <p>
+        6. Создайте функцию конструктор Calculator, которая создаёт «расширяемые» объекты калькулятора.</br>
+        Задание состоит из двух частей.
+    </p>
+    <ol>
+        <li>
+            Во-первых, реализуйте метод calculate(str), который принимает строку типа "1 + 2" в формате «ЧИСЛО оператор
+            ЧИСЛО» (разделено пробелами) и возвращает результат. Метод должен понимать плюс + и минус -.
+        </li>
+        <li>
+            Затем добавьте метод addMethod(name, func), который добавляет в калькулятор новые операции. Он принимает
+            оператор name и функцию с двумя аргументами func(a,b), которая описывает его.</br>
+            Например, давайте добавим умножение *, деление / и возведение в степень **
+        </li>
+    </ol>
+    <ul>
+        <li>Для этой задачи не нужны скобки или сложные выражения.</li>
+        <li>Числа и оператор разделены ровно одним пробелом.</li>
+        <li>Не лишним будет добавить обработку ошибок.</li>
+    </ul>
+    <script>
+        function Calculator() {
+            this.method = {
+                '+': (num1, num2) => num1 + num2,
+                '-': (num1, num2) => num1 - num2,
+            }
+            this.calculate = (str) => {
+                let arrStr = str.split(' ');
+                let num1 = +arrStr[0];
+                let method = arrStr[1];
+                let num2 = +arrStr[2];
+                if (isNaN(num1) || isNaN(num2) || !this.method[method]) {
+                    return null
+                }
+                return this.method[method](num1, num2);
+            }
+            this.addMethod = (name, func) => {
+                this.method[name] = func;
+            }
+        }
+        let calc = new Calculator;
+
+        alert('3 + 7 = ' + calc.calculate("3 + 7"));
+        alert('7 - 3 = ' + calc.calculate("7 - 3"));
+        let powerCalc = new Calculator;
+        powerCalc.addMethod("*", (a, b) => a * b);
+        powerCalc.addMethod("/", (a, b) => a / b);
+        powerCalc.addMethod("**", (a, b) => a ** b);
+
+        alert('2 * 3 = ' + powerCalc.calculate("2 * 3"));
+        alert('10 / 2 = ' + powerCalc.calculate("10 / 2"));
+        alert('2 ** 3 = ' + powerCalc.calculate("2 ** 3"));
+    </script>
+</body>
+
+</html>

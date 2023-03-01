@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arrow Functions. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Основы JavaScript
+    </h1>
+    <h2>
+        Стрелочные функции, основы
+    </h2>
+    <p>
+        1. Замените код Function Expression стрелочной функцией:
+    </p>
+    <script>
+        function ask(question, yes, no) {
+            if (confirm(question)) yes()
+            else no();
+        }
+
+        ask(
+            "Вы согласны?",
+            () => alert("Вы согласились."),
+            () => alert("Вы отменили выполнение.")
+        );
+    </script>
+</body>
+
+</html>

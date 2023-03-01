@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Coding Style. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Качество кода
+    </h1>
+    <h2>
+        Советы по стилю кода
+    </h2>
+    <p>
+        1. Какие недостатки вы видите в стиле написания кода этого примера?
+    </p>
+    <p>Ответ в консоли</p>
+    <script>
+        function pow(x, n) {
+            let result = 1;
+            for (let i = 0; i < n; i++) { result *= x; }
+            return result;
+        }
+
+        let x = prompt("x?", ''), n = prompt("n?", '')
+        if (n <= 0) {
+            alert(`Степень ${n} не поддерживается, введите целую степень, большую 0`);
+        }
+        else {
+            alert(pow(x, n))
+        }
+
+
+        console.log('Во многих местах скобки на новых строчках');
+        console.log('Результат условия лучше вынести на другую строку');
+        console.log('Отдельные запросы лучше на новых строчках');
+        console.log('Много где нет пробелов');
+
+        // function pow(x, n) {
+        //     let result = 1;
+        //     for (let i = 0; i < n; i++) {
+        //         result *= x;
+        //     }
+        //     return result;
+        // }
+
+        // let x = prompt("x?", '');
+        // let n = prompt("n?", '');
+
+        // if (n <= 0) {
+        //     alert(`Степень ${n} не поддерживается,
+        //         введите целую степень, большую 0`);
+        // } else {
+        //     alert(pow(x, n))
+        // }
+    </script>
+</body>
+
+</html>

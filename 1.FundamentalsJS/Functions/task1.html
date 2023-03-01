@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Functions. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Основы JavaScript
+    </h1>
+    <h2>
+        Функции
+    </h2>
+    <p>
+        1. Следующая функция возвращает true, если параметр age больше 18.<br/>
+        В ином случае она запрашивает подтверждение через confirm и возвращает его результат:<br/>
+        Будет ли эта функция работать как-то иначе, если убрать else?<br/>
+        Есть ли хоть одно отличие в поведении этого варианта?
+    </p>
+    <p>
+        Ответ: Оба варианты работают одинаково
+    </p>
+    
+    <script>
+        let age = +prompt('Введите возраст!')
+
+        function checkAge(age) {
+            if (age > 18) {
+                return true;
+            } else {
+                return confirm('Родители разрешили?');
+            }
+        }
+
+        function checkAge1(age) {
+            if (age > 18) {
+                return true;
+            }
+            return confirm('Родители разрешили?');
+        }
+        console.log('Оба варианты работают одинаково')
+    </script>
+</body>
+
+</html>

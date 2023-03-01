@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Automated Testing. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Качество кода
+    </h1>
+    <h2>
+        Советы по стилю кода
+    </h2>
+    <p>
+        1. Что не так в нижеприведённом тесте функции pow?
+    </p>
+    <code>
+        it("Возводит x в степень n", function() {<br/>
+            let x = 5;<br/>
+            let result = x;<br/>
+            assert.equal(pow(x, 1), result);<br/>
+            result *= x;<br/>
+            assert.equal(pow(x, 2), result);<br/>
+            result *= x;<br/>
+            assert.equal(pow(x, 3), result);<br/>
+          });
+    </code>
+    <p>В таком коде не понятно, где именно произошла ошибка. Поэтому следует разбивать на более маленькие части.</p>
+    <code>
+        describe("Возводит x в степень n", function() {<br/>
+            it("5 в степени 1 = 5", function() {<br/>
+                assert.equal(pow(5, 1), 5);<br/>
+            });<br/>
+            it("5 в степени 2 = 25", function() {<br/>
+                assert.equal(pow(5, 2), 25);<br/>
+            });<br/>
+            it("5 в степени 3 = 125", function() {<br/>
+                assert.equal(pow(5, 3), 125);<br/>
+            });<br/>
+        })
+    </code>
+    <script>
+        it("Возводит x в степень n", function () {
+            let x = 5;
+
+            let result = x;
+            assert.equal(pow(x, 1), result);
+
+            result *= x;
+            assert.equal(pow(x, 2), result);
+
+            result *= x;
+            assert.equal(pow(x, 3), result);
+        });
+
+        //В таком коде не понятно, где именно произошла ошибка. Поэтому следует разбивать на более маленькие части.
+        describe("Возводит x в степень n", function() {
+            it("5 в степени 1 = 5", function() {
+                assert.equal(pow(5, 1), 5);
+            });
+
+            it("5 в степени 2 = 25", function() {
+                assert.equal(pow(5, 2), 25);
+            });
+
+            it("5 в степени 3 = 125", function() {
+                assert.equal(pow(5, 3), 125);
+            });
+        })
+    </script>
+</body>
+
+</html>

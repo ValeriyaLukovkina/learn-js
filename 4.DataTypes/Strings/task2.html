@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Strings. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Типы данных
+    </h1>
+    <h2>
+        Строки
+    </h2>
+    <p>
+        2. Напишите функцию checkSpam(str), возвращающую true, если str содержит 'viagra' или 'XXX', а иначе false.</br>
+        Функция должна быть нечувствительна к регистру
+    </p>
+    <script>
+        const checkSpam = (str) => {
+            let lowerStr = str.toLowerCase();
+            return lowerStr.includes('viagra') || lowerStr.includes('xxx')
+        }
+        alert(checkSpam('buy ViAgRA now') == true);
+        alert(checkSpam('free xxxxx') == true);
+        alert(checkSpam("innocent rabbit") == false);
+    </script>
+</body>
+
+</html>
