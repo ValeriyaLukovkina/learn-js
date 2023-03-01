@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Date
+    </h2>
+    <script>
+        const getWeekDay = (date) => {
+            let arr = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
+            let week = date.getDay()
+            return arr[week];
+        }
+        let date = new Date(2012, 0, 3);  // 3 января 2012 года
+        alert(getWeekDay(date));  
+    </script>
+</body>
+
+</html>

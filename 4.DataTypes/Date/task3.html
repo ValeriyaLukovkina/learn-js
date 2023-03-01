@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date. Task 3</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+       Date
+    </h2>
+    <script>
+        function getLocalDay(date) {
+            let d = date.getDay();
+            if (d == 0) {
+                d = 7;
+            }
+            return d;
+        }
+        let date = new Date(2012, 0, 3);
+        alert(getLocalDay(date));    
+    </script>
+</body>
+
+</html>

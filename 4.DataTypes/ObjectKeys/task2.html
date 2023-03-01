@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Object.keys, values, entries. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Object.keys, values, entries
+    </h2>
+    <script>
+
+        const count = (obj) => {
+            return Object.keys(obj).length;
+        }
+        let user = {
+            name: 'John',
+            age: 30
+        };
+
+        alert(count(user)); // 2
+    </script>
+</body>
+
+</html>

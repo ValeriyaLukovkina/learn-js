@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date. Task 6</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Date
+    </h2>
+    <script>
+        function getSecondsToday() {
+            let d = new Date();
+            let dn = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+            let dif = d - dn;
+            return dif / 1000
+        }
+        alert(getSecondsToday());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JSON. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        JSON
+    </h2>
+    <script>
+        let room = {
+            number: 23
+        };
+        let meetup = {
+            title: "Совещание",
+            occupiedBy: [{ name: "Иванов" }, { name: "Петров" }],
+            place: room
+        };
+        room.occupiedBy = meetup;
+        meetup.self = meetup;
+        alert(JSON.stringify(meetup, function replacer(key, value) {
+            return (key != "" && value == meetup) ? undefined : value;
+        }));
+
+        function loadScript(src, callback) {
+            let script = document.createElement('script');
+            script.src = src;
+
+            script.onload = () => callback(null, script);
+            script.onerror = () => callback(new Error(`Не удалось загрузить скрипт ${src}`));
+
+            document.head.append(script);
+        }
+    </script>
+</body>
+
+</html>

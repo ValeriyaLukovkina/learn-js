@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date. Task 8</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Date
+    </h2>
+    <script>
+        function formatDate(date) {
+            let d = new Date();
+            let dif = (d - date);
+            if (dif < 1 * 1000) {
+                return "прямо сейчас"
+            } else if (dif > 1 * 1000 && dif < 1 * 1000 * 60) {
+                return "30 сек. назад"
+            } else if (dif > 1 * 1000 * 60 && dif < 1 * 1000 * 60 * 60) {
+                return "5 мин. назад"
+            } else {
+                return d.getDate() + '.' + (d.getMonth() + 1) + '.' + d.getFullYear() + ', ' + d.getHours() + ':' + d.getMinutes()
+            }
+        }
+        alert(formatDate(new Date(new Date - 1)));
+        alert(formatDate(new Date(new Date - 30 * 1000))); // "30 сек. назад"
+        alert(formatDate(new Date(new Date - 5 * 60 * 1000))); // "5 мин. назад"
+        alert(formatDate(new Date(new Date - 86400 * 1000)));
+        let numbers = "[0, 1, 2, 3]";
+    </script>
+</body>
+
+</html>

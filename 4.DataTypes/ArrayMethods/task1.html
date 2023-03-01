@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Array methods. Task 1</title>
+    <title>Date. Task 1</title>
 </head>
 
 <body>
@@ -11,12 +11,18 @@
         Объекты: основы
     </h1>
     <h2>
-        Методы массивов
+        Date
     </h2>
     <p>
-        1. Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».</br>
-        То есть дефисы удаляются, а все слова после них получают заглавную букву.
+        1. Напишите функцию camelize(str), которая преобразует строки вида «my-short-string» в «myShortString».<br/>
+        То есть дефисы удаляются, а все слова после них получают заглавную букву.<br/>
+        Пример:
     </p>
+    <pre><code>
+        camelize("background-color") == 'backgroundColor';
+        camelize("list-style-image") == 'listStyleImage';
+        camelize("-webkit-transition") == 'WebkitTransition';
+    </code></pre>
     <script>
         function camelize(str) {
             let arr = str.split('-');

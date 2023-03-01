@@ -66,26 +66,66 @@
 - [Rewrite with arrow functions](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/ArrowFunctions/task1.html);
 
 # 2.Code quality
-1.1 Coding Style 
+2.1 Coding Style 
 - [Bad style](https://valeriyalukovkina.github.io/learn-js/2.CodeQuality/CodingStyle/task1.html);
 
-1.2 Automated testing with Mocha
+3.2 Automated testing with Mocha
 - [What's wrong in the test?](https://valeriyalukovkina.github.io/learn-js/2.CodeQuality/AutomatedTesting/task1.html);
 
 # 3.Objects: the basics
-1.1 Objects
+3.1 Objects
 - [Hello, object](https://valeriyalukovkina.github.io/learn-js/3.Objects/Objects/task1.html);
 - [Check for emptiness](https://valeriyalukovkina.github.io/learn-js/3.Objects/Objects/task2.html);
 - [Objects-const](https://valeriyalukovkina.github.io/learn-js/3.Objects/Objects/task3.html);
 - [Sum object properties](https://valeriyalukovkina.github.io/learn-js/3.Objects/Objects/task4.html);
 - [Multiply numeric property values by 2](https://valeriyalukovkina.github.io/learn-js/3.Objects/Objects/task5.html);
 
-1.2 Object methods, "this"
+3.2 Object methods, "this"
 - [Using "this" in object literal](https://valeriyalukovkina.github.io/learn-js/3.Objects/ObjectMethods/task1.html);
 - [Create a calculator](https://valeriyalukovkina.github.io/learn-js/3.Objects/ObjectMethods/task2.html);
 - [Chaining](https://valeriyalukovkina.github.io/learn-js/3.Objects/ObjectMethods/task3.html);
 
-1.3 Constructor, operator "new"
+3.3 Constructor, operator "new"
 - [Two functions – one object](https://valeriyalukovkina.github.io/learn-js/3.Objects/Constructor/task1.html);
 - [Create new Calculator](https://valeriyalukovkina.github.io/learn-js/3.Objects/Constructor/task2.html);
 - [Create new Accumulator](https://valeriyalukovkina.github.io/learn-js/3.Objects/Constructor/task3.html);
+
+# 4.Data types
+4.1 Methods of primitives
+- [Can I add a string property?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/MethodsOfPrimitives/task1.html);
+
+4.2 Numbers
+- [Sum numbers from the visitor](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Numbers/task1.html);
+- [Why 6.35.toFixed(1) == 6.3?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Numbers/task2.html);
+- [Repeat until the input is a number](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Numbers/task3.html);
+- [An occasional infinite loop](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Numbers/task4.html);
+- [A random number from min to max](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Numbers/task5.html);
+- [A random integer from min to max](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Numbers/task6.html);
+
+4.3 Strings
+- [Uppercase the first character](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Strings/task1.html);
+- [Check for spam](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Strings/task2.html);
+- [Truncate the text](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Strings/task3.html);
+- [Extract the money](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Strings/task4.html);
+
+4.4 Arrays
+- [Is array copied?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Arrays/task1.html);
+- [Array operations.](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Arrays/task2.html);
+- [Calling in an array context](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Arrays/task3.html);
+- [Sum input numbers](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Arrays/task4.html);
+- [A maximal subarray](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Arrays/task5.html);
+
+4.5 Array methods
+- [Is array copied?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task1.html);
+- [Array operations.](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task2.html);
+- [Calling in an array context](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task3.html);
+- [Sum input numbers](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task4.html);
+- [A maximal subarray](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task5.html);
+- [Is array copied?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task6.html);
+- [Array operations.](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task7.html);
+- [Calling in an array context](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task8.html);
+- [Sum input numbers](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task9.html);
+- [A maximal subarray](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task10.html);
+- [Calling in an array context](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task11.html);
+- [Sum input numbers](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task12.html);
+- [A maximal subarray](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task13.html);

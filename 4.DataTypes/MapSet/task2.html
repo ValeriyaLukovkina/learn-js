@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Map and Set. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Map и Set
+    </h2>
+    <script>
+
+        const aclean = (arr) => {
+            let map = new Map();
+
+            for (let word of arr) {
+                let sort = word.toLowerCase().split("").sort().join("");
+                map.set(sort, word);
+            }
+
+            return Array.from(map.values());
+        }
+
+        let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+
+        alert(aclean(arr));
+    </script>
+</body>
+
+</html>

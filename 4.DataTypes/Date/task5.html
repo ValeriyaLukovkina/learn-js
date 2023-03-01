@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date. Task 5</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Date
+    </h2>
+    <script>
+        function getLastDayOfMonth(year, month) {
+            let d = new Date(year, month + 1, 0);
+            return d.getDate()
+        }
+        console.log(getLastDayOfMonth(2012, 1))
+    </script>
+</body>
+
+</html>

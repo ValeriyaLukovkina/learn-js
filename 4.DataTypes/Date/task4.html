@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Date. Task 4</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Date
+    </h2>
+    <script>
+        function getDateAgo(date, days) {
+            let dateCopy = new Date(date);
+            dateCopy.setDate(date.getDate() - days);
+            return dateCopy.getDate();
+        }
+        let date = new Date(2015, 0, 2);
+
+        alert(getDateAgo(date, 1));
+        alert(getDateAgo(date, 2));
+        alert(getDateAgo(date, 365)); 
+    </script>
+</body>
+
+</html>

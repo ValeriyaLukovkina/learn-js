@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Деструктурирующее присваивание. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Деструктурирующее присваивание
+    </h2>
+    <script>
+        let user = {
+            name: "John",
+            years: 30
+        };
+        let { name, years: age, isAdmin = false } = user;
+
+        alert(name);
+        alert(age);
+        alert(isAdmin); 
+    </script>
+</body>
+
+</html>
