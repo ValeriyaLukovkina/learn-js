@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring assignment. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Объекты: основы
+    </h1>
+    <h2>
+        Destructuring assignment
+    </h2>
+    <p>
+        1. У нас есть объект:
+    </p>
+    <pre><code>
+        let user = {
+            name: "John",
+            years: 30
+          };
+    </code></pre>
+    <p>Напишите деструктурирующее присваивание, которое:</p>
+    <ul>
+        <li>свойство name присвоит в переменную name.</li>
+        <li>свойство years присвоит в переменную age.</li>
+        <li>свойство isAdmin присвоит в переменную isAdmin (false, если нет такого свойства)</li>
+    </ul>
+    <p>Пример переменных после вашего присваивания:</p>
+    <pre><code>
+        let user = { name: "John", years: 30 };
+
+        // ваш код должен быть с левой стороны:
+        // ... = user
+
+        alert( name ); // John
+        alert( age ); // 30
+        alert( isAdmin ); // false
+    </code></pre>
+    <script>
+        let user = {
+            name: "John",
+            years: 30
+        };
+        let { name, years: age, isAdmin = false } = user;
+
+        alert(name);
+        alert(age);
+        alert(isAdmin); 
+    </script>
+</body>
+
+</html>

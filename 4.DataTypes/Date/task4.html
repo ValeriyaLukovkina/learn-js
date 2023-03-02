@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Date. Task 4</title>
+    <title>Date and time. Task 4</title>
 </head>
 
 <body>
@@ -11,8 +11,27 @@
         Объекты: основы
     </h1>
     <h2>
-        Date
+        Date and time
     </h2>
+    <p>
+        4. Создайте функцию getDateAgo(date, days), возвращающую число, которое было days дней назад от даты date.
+    </p>
+    <p>
+        К примеру, если сегодня двадцатое число, то getDateAgo(new Date(), 1) вернёт девятнадцатое и getDateAgo(new Date(), 2) – восемнадцатое.
+    </p>
+    <p>
+        Функция должна надёжно работать при значении days=365 и больших значениях:
+    </p>
+    <pre><code>
+        let date = new Date(2015, 0, 2);
+
+        alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+        alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+        alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
+    </code></pre>
+    <p>
+        P.S. Функция не должна изменять переданный ей объект date.
+    </p>
     <script>
         function getDateAgo(date, days) {
             let dateCopy = new Date(date);

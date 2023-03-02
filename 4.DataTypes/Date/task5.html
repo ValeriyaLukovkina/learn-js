@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Date. Task 5</title>
+    <title>Date and time. Task 5</title>
 </head>
 
 <body>
@@ -11,14 +11,30 @@
         Объекты: основы
     </h1>
     <h2>
-        Date
+        Date and time
     </h2>
+    <p>
+        5. Напишите функцию getLastDayOfMonth(year, month), возвращающую последнее число месяца. Иногда это 30, 31 или даже февральские 28/29.
+    </p>
+    <p>
+        Параметры:
+    </p>
+    <ul>
+        <li>year – год из четырёх цифр, например, 2012.</li>
+        <li>month – месяц от 0 до 11.</li>
+    </ul>
+    <p>
+        К примеру, getLastDayOfMonth(2012, 1) = 29 (високосный год, февраль).
+    </p>
+    <p>
+        P.S. Функция не должна изменять переданный ей объект date.
+    </p>
     <script>
         function getLastDayOfMonth(year, month) {
             let d = new Date(year, month + 1, 0);
             return d.getDate()
         }
-        console.log(getLastDayOfMonth(2012, 1))
+        alert(getLastDayOfMonth(2012, 1))
     </script>
 </body>
 

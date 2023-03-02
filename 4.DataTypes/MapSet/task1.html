@@ -18,6 +18,17 @@
         Создайте функцию unique(arr), которая вернёт массив уникальных, не повторяющихся значений массива arr.<br />
         Например:
     </p>
+    <pre><code>
+        function unique(arr) {
+            /* ваш код */
+          }
+          
+          let values = ["Hare", "Krishna", "Hare", "Krishna",
+            "Krishna", "Krishna", "Hare", "Hare", ":-O"
+          ];
+          
+          alert( unique(values) ); // Hare,Krishna,:-O
+    </code></pre>
     <script>
         function unique(arr) {
             return Array.from(new Set(arr));
@@ -25,7 +36,7 @@
         let values = ["Hare", "Krishna", "Hare", "Krishna",
             "Krishna", "Krishna", "Hare", "Hare", ":-O"
         ];
-        console.log(unique(values));
+        alert(unique(values));
     </script>
 </body>
 

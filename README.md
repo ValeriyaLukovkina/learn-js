@@ -116,16 +116,47 @@
 - [A maximal subarray](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Arrays/task5.html);
 
 4.5 Array methods
-- [Is array copied?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task1.html);
-- [Array operations.](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task2.html);
-- [Calling in an array context](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task3.html);
-- [Sum input numbers](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task4.html);
-- [A maximal subarray](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task5.html);
-- [Is array copied?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task6.html);
-- [Array operations.](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task7.html);
-- [Calling in an array context](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task8.html);
-- [Sum input numbers](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task9.html);
-- [A maximal subarray](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task10.html);
-- [Calling in an array context](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task11.html);
-- [Sum input numbers](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task12.html);
-- [A maximal subarray](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task13.html);
+- [Translate border-left-width to borderLeftWidth](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task1.html);
+- [Filter range](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task2.html);
+- [Filter range "in place"](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task3.html);
+- [Sort in decreasing order](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task4.html);
+- [Copy and sort array](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task5.html);
+- [Create an extendable calculator](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task6.html);
+- [Map to names](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task7.html);
+- [Map to objects](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task8.html);
+- [Sort users by age](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task9.html);
+- [Shuffle an array](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task10.html);
+- [Get average age](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task11.html);
+- [Filter unique array members](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task12.html);
+- [Create keyed object from array](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ArrayMethods/task13.html);
+
+4.6 Map and Set
+- [Filter unique array members](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/MapSet/task1.html);
+- [Filter anagrams](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/MapSet/task2.html);
+- [Iterable keys](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/MapSet/task3.html);
+
+4.7 WeakMap and WeakSet
+- [Store "unread" flags](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/WeakMapSet/task1.html);
+- [Store read dates](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/WeakMapSet/task2.html);
+
+4.8 WeakMap and WeakSet
+- [Sum the properties](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ObjectKeys/task1.html);
+- [Count properties](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/ObjectKeys/task2.html);
+
+4.9 WeakMap and WeakSet
+- [Destructuring assignment](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Destructuring/task1.html);
+- [The maximal salary](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Destructuring/task2.html);
+
+4.10 Date and time
+- [Create a date](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Date/task1.html);
+- [Show a weekday](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Date/task2.html);
+- [European weekday](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Date/task3.html);
+- [Which day of month was many days ago?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Date/task4.html);
+- [Last day of month?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Date/task5.html);
+- [How many seconds have passed today?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Date/task6.html);
+- [How many seconds till tomorrow?](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Date/task7.html);
+- [Format the relative date](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/Date/task8.html);
+
+4.11 JSON methods, toJSON
+- [Turn the object into JSON and back](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/JSON/task1.html);
+- [Exclude backreferences](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/JSON/task2.html);

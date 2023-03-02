@@ -13,8 +13,24 @@
     <h2>
         Object.keys, values, entries
     </h2>
+    <p>
+        1. Напишите функцию count(obj), которая возвращает количество свойств объекта:
+    </p>
+    <pre><code>
+        let user = {
+            name: 'John',
+            age: 30
+        };
+          
+        alert( count(user) ); // 2
+    </code></pre>
+    <p>
+        Постарайтесь сделать код как можно короче.
+    </p>
+    <p>
+        P.S. Игнорируйте символьные свойства, подсчитывайте только «обычные».
+    </p>
     <script>
-
         const count = (obj) => {
             return Object.keys(obj).length;
         }
@@ -23,7 +39,7 @@
             age: 30
         };
 
-        alert(count(user)); // 2
+        alert(count(user));
     </script>
 </body>
 

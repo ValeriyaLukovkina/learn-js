@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Date. Task 2</title>
+    <title>Date and time. Task 2</title>
 </head>
 
 <body>
@@ -11,15 +11,23 @@
         Объекты: основы
     </h1>
     <h2>
-        Date
+        Date and time
     </h2>
+    <p>
+        2. Напишите функцию getWeekDay(date), показывающую день недели в коротком формате: «ПН», «ВТ», «СР», «ЧТ», «ПТ», «СБ», «ВС».<br/>
+        Например:
+    </p>
+    <pre><code>
+        let date = new Date(2012, 0, 3);  // 3 января 2012 года
+        alert( getWeekDay(date) );        // нужно вывести "ВТ"
+    </code></pre>
     <script>
         const getWeekDay = (date) => {
             let arr = ['ВС', 'ПН', 'ВТ', 'СР', 'ЧТ', 'ПТ', 'СБ'];
             let week = date.getDay()
             return arr[week];
         }
-        let date = new Date(2012, 0, 3);  // 3 января 2012 года
+        let date = new Date(2012, 0, 3);
         alert(getWeekDay(date));  
     </script>
 </body>

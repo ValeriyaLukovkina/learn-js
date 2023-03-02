@@ -13,6 +13,28 @@
     <h2>
         Map и Set
     </h2>
+    <p>
+        3. Мы хотели бы получить массив ключей map.keys() в переменную и далее работать с ними, например, применить метод .push. <br/>
+        Но это не выходит:
+    </p>
+    <pre><code>
+        let map = new Map();
+
+        map.set("name", "John");
+        
+        let keys = map.keys();
+        
+        // Error: keys.push is not a function
+        // Ошибка: keys.push -- это не функция
+        keys.push("more");
+    </code></pre>
+    <p>
+        Почему? Что нужно поправить в коде, чтобы вызов keys.push сработал?
+    </p>
+    <p>
+        Ответ: Чтобы работало надо возвращать массив.<br/>
+        Нужно поменять строчку <code>let keys = map.keys();</code> на <code>let keys = Array.from(map.keys());</code>
+    </p>
     <script>
         let map = new Map();
         map.set("name", "John");

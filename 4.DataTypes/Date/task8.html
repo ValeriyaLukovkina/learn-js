@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Date. Task 8</title>
+    <title>Date and time. Task 8</title>
 </head>
 
 <body>
@@ -11,27 +11,52 @@
         Объекты: основы
     </h1>
     <h2>
-        Date
+        Date and time
     </h2>
+    <p>
+        8. Напишите функцию formatDate(date), форматирующую date по следующему принципу:
+    </p>
+    <ul>
+        <li>Если спустя date прошло менее 1 секунды, вывести "прямо сейчас".</li>
+        <li>В противном случае, если с date прошло меньше 1 минуты, вывести "n сек. назад".</li>
+        <li>В противном случае, если меньше часа, вывести "m мин. назад".</li>
+        <li>В противном случае, полная дата в формате "DD.MM.YY HH:mm". А именно: "день.месяц.год часы:минуты", всё в виде двух цифр, т.е. 31.12.16 10:00.</li>
+    </ul>
+    <p>Например</p>
+    <pre><code>
+        alert( formatDate(new Date(new Date - 1)) ); // "прямо сейчас"
+
+        alert( formatDate(new Date(new Date - 30 * 1000)) ); // "30 сек. назад"
+
+        alert( formatDate(new Date(new Date - 5 * 60 * 1000)) ); // "5 мин. назад"
+
+        // вчерашняя дата вроде 31.12.2016, 20:00
+        alert( formatDate(new Date(new Date - 86400 * 1000)) );
+    </code></pre>
     <script>
+        function addZero (date) {
+            if (date <=9) {
+                return '0' + date;
+            }
+            return date;
+        }
         function formatDate(date) {
             let d = new Date();
             let dif = (d - date);
             if (dif < 1 * 1000) {
-                return "прямо сейчас"
+                return "прямо сейчас";
             } else if (dif > 1 * 1000 && dif < 1 * 1000 * 60) {
-                return "30 сек. назад"
+                return "30 сек. назад";
             } else if (dif > 1 * 1000 * 60 && dif < 1 * 1000 * 60 * 60) {
-                return "5 мин. назад"
+                return "5 мин. назад";
             } else {
-                return d.getDate() + '.' + (d.getMonth() + 1) + '.' + d.getFullYear() + ', ' + d.getHours() + ':' + d.getMinutes()
+                return addZero(date.getDate()) + '.' + addZero((date.getMonth() + 1)) + '.' + date.getFullYear() + ', ' + addZero(date.getHours()) + ':' + addZero(date.getMinutes());
             }
         }
         alert(formatDate(new Date(new Date - 1)));
-        alert(formatDate(new Date(new Date - 30 * 1000))); // "30 сек. назад"
-        alert(formatDate(new Date(new Date - 5 * 60 * 1000))); // "5 мин. назад"
+        alert(formatDate(new Date(new Date - 30 * 1000)));
+        alert(formatDate(new Date(new Date - 5 * 60 * 1000)));
         alert(formatDate(new Date(new Date - 86400 * 1000)));
-        let numbers = "[0, 1, 2, 3]";
     </script>
 </body>
 

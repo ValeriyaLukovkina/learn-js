@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Date. Task 3</title>
+    <title>Date and time. Task 3</title>
 </head>
 
 <body>
@@ -11,8 +11,17 @@
         Объекты: основы
     </h1>
     <h2>
-       Date
+        Date and time
     </h2>
+    <p>
+        3. В Европейских странах неделя начинается с понедельника (день номер 1), затем идёт вторник (номер 2) и так до
+        воскресенья (номер 7). Напишите функцию getLocalDay(date), которая возвращает «европейский» день недели для даты
+        date.
+    </p>
+    <pre><code>
+        let date = new Date(2012, 0, 3);  // 3 января 2012 года
+        alert( getLocalDay(date) );       // вторник, нужно показать 2
+    </code></pre>
     <script>
         function getLocalDay(date) {
             let d = date.getDay();
