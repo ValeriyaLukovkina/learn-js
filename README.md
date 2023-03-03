@@ -60,7 +60,7 @@ https://valeriyalukovkina.github.io/learn-js
 
 1.10 Functions
 - [Is "else" required?](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/Functions/task1.html);
-- [Rewrite the function using '?' or '| |'](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/Functions/task2.html);
+- [Rewrite the function](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/Functions/task2.html);
 - [Function min(a, b)](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/Functions/task3.html);
 - [Function pow(x,n)](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/Functions/task4.html);
 
