@@ -1,5 +1,7 @@
 ## learn-js
 
+https://valeriyalukovkina.github.io/learn-js
+
 # 1.JavaScript Fundamentals
 1.1 Hello, world! 
 - [Show an alert](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/HelloWorld/Task1/task1.html);
@@ -58,7 +60,7 @@
 
 1.10 Functions
 - [Is "else" required?](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/Functions/task1.html);
-- [Rewrite the function using '?' or '||'](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/Functions/task2.html);
+- [Rewrite the function using '?' or '| |'](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/Functions/task2.html);
 - [Function min(a, b)](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/Functions/task3.html);
 - [Function pow(x,n)](https://valeriyalukovkina.github.io/learn-js/1.FundamentalsJS/Functions/task4.html);
 
@@ -160,3 +162,29 @@
 4.11 JSON methods, toJSON
 - [Turn the object into JSON and back](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/JSON/task1.html);
 - [Exclude backreferences](https://valeriyalukovkina.github.io/learn-js/4.DataTypes/JSON/task2.html);
+
+# 5.Advanced working with functions
+
+5.1 Recursion and stack
+- [Sum all numbers till the given one](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/RecursionStack/task1.html);
+- [Calculate factorial](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/RecursionStack/task2.html);
+- [Fibonacci numbers](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/RecursionStack/task3.html);
+- [Output a single-linked list](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/RecursionStack/task4.html);
+- [Output a single-linked list in the reverse order](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/RecursionStack/task5.html);
+
+5.2 Closure
+- [Are counters independent?](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Closure/task1.html);
+- [Counter object](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Closure/task2.html);
+- [Function in if](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Closure/task3.html);
+- [Sum with closures](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Closure/task4.html);
+- [Filter through function](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Closure/task5.html);
+- [Sort by field](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Closure/task6.html);
+- [Army of functions](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Closure/task7.html);
+
+5.3 Function object, NFE
+- [Set and decrease for counter](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/FunctionObject/task1.html);
+- [Sum with an arbitrary amount of brackets](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/FunctionObject/task2.html);
+
+5.4 Scheduling: setTimeout and setInterval
+- [Output every second](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Scheduling/task1.html);
+- [What will setTimeout show?](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Scheduling/task2.html);
