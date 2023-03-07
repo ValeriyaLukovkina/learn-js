@@ -19,16 +19,28 @@
     <pre><code>
         function fib(n) { /* ваш код */ }
 
-        alert(fib(3)); // 2
-        alert(fib(7)); // 13
-        alert(fib(77)); // 5527939700884757
+        fib(3) = 2
+        fib(7) = 13
+        fib(77) = 5527939700884757
     </code></pre>
     <p>
         P.S. Все запуски функций из примера выше должны работать быстро. Вызов fib(77) должен занимать не более доли
         секунды.
     </p>
     <script>
+        let num = +prompt('Введите число', 0);
 
+        const fib = (n) => {
+            let a = 1;
+            let b = 1;
+            for (let i = 3; i <= n; i++) {
+                let c = a + b;
+                a = b;
+                b = c;
+            }
+            return b;
+        }
+        alert(fib(num));
     </script>
 </body>
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>F.prototype. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Prototypes, inheritance
+    </h1>
+    <h2>
+        F.prototype
+    </h2>
+    <p>
+        2. Представьте, что у нас имеется некий объект obj, созданный функцией-конструктором – мы не знаем какой именно,
+        но хотелось бы создать ещё один объект такого же типа.<br />
+        Можем ли мы сделать так?
+    </p>
+    <pre><code>
+        let obj2 = new obj.constructor();
+    </code></pre>
+    <p>
+        Приведите пример функции-конструктора для объекта obj, с которой такой вызов корректно сработает. И пример
+        функции-конструктора, с которой такой код поведёт себя неправильно.
+    </p>
+    <p>
+        Ответ: это сработает, так как Prototype по умолчанию имеет свойсвто constructor и, если не будет перезаписи
+        Prototype, то будет работать.
+    <pre><code>
+            function Obj (elem) {
+                this.elem = elem;
+            }
+            let obj = new Obj('1')
+            let obj2 = new obj.constructor('2');
+            alert(obj2.elem); // 2
+        </code></pre>
+    </p>
+    <p>
+        Если перезаписать prototype и не добавить в него constructor, то поведение будет некорректно
+    <pre><code>
+            function Object (elem) {
+                this.elem = elem;
+            }
+            Object.prototype = {}
+            let object = new Object('1')
+            let object2 = new object.constructor('2');
+            alert(object2.elem); // undefind
+        </code></pre>
+    </p>
+    <script>
+        function Obj(elem) {
+            this.elem = elem;
+        }
+        let obj = new Obj('1')
+        let obj2 = new obj.constructor('2');
+        alert(obj2.elem); // 2
+
+        function Object(elem) {
+            this.elem = elem;
+        }
+        Object.prototype = {}
+        let object = new Object('1')
+        let object2 = new object.constructor('2');
+        alert(object2.elem); // undefind
+    </script>
+</body>
+
+</html>

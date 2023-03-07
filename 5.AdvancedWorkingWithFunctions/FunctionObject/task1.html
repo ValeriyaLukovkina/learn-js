@@ -26,6 +26,29 @@
         функции. Или сделать два варианта решения: и так, и так.
     </p>
     <script>
+        function makeCounter() {
+            let count = 0;
+
+            function counter() {
+                return ++count;
+            };
+
+            counter.set = el => {
+                return count = el;
+            };
+            counter.decrease = () => {
+                return --count;
+            };
+
+            return counter;
+        }
+        let counter = makeCounter();
+
+        alert('counter(): ' + counter());
+        alert('counter.set(9): ' + counter.set(9));
+        alert('counter.decrease(): ' + counter.decrease());
+        alert('counter(): ' + counter());
+
     </script>
 </body>
 

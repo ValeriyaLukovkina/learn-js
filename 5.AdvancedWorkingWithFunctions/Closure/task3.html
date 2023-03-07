@@ -29,8 +29,22 @@
         
         sayHi();
     </code></pre>
+    <p>
+        Ответ: результатом будем ошибка, так как sayHi() недоступна во внешнем блоке из-за того, что объявлена в блоке if.
+    </p>
     <script>
+        "use strict";
+        let phrase = "Hello";
 
+        if (true) {
+            let user = "John";
+
+            function sayHi() {
+                alert(`${phrase}, ${user}`);
+            }
+        }
+
+        sayHi();
     </script>
 </body>
 

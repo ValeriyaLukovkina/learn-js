@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Decorators and forwarding, call/apply. Task 3</title>
+</head>
+
+<body>
+    <h1>
+        Advanced working with functions
+    </h1>
+    <h2>
+        Decorators and forwarding, call/apply
+    </h2>
+    <p>
+        3. Результатом декоратора debounce(f, ms) должна быть обёртка, которая передаёт вызов f не более одного раза в ms миллисекунд. Другими словами, когда мы вызываем debounce, это гарантирует, что все остальные вызовы будут игнорироваться в течение ms.<br/>
+        Например:        
+    </p>
+    <pre><code>
+        let f = debounce(alert, 1000);
+
+        f(1); // выполняется немедленно
+        f(2); // проигнорирован
+        
+        setTimeout( () => f(3), 100); // проигнорирован (прошло только 100 мс)
+        setTimeout( () => f(4), 1100); // выполняется
+        setTimeout( () => f(5), 1500); // проигнорирован (прошло только 400 мс от последнего вызова)
+    </code></pre>
+    <script>
+
+    </script>
+</body>
+
+</html>

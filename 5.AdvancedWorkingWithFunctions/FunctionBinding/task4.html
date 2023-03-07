@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Function binding. Task 4</title>
+</head>
+
+<body>
+    <h1>
+        Advanced working with functions
+    </h1>
+    <h2>
+        Function binding
+    </h2>
+    <p>
+        4. Вызов askPassword() в приведённом ниже коде должен проверить пароль и затем вызвать user.loginOk/loginFail в
+        зависимости от ответа.<br />
+        Однако, его вызов приводит к ошибке. Почему?<br />
+        Исправьте выделенную строку, чтобы всё работало (других строк изменять не надо).
+    </p>
+    <pre><code>
+        function askPassword(ok, fail) {
+            let password = prompt("Password?", '');
+            if (password == "rockstar") ok();
+            else fail();
+        }
+          
+        let user = {
+            name: 'Вася',
+          
+            loginOk() {
+              alert(`${this.name} logged in`);
+            },
+          
+            loginFail() {
+              alert(`${this.name} failed to log in`);
+            },
+          
+        };
+          
+        askPassword(user.loginOk, user.loginFail);
+    </code></pre>
+    <p>
+        Выводилась ошибка из-за того, что в функцию askPassword передавались функции без аргумента и, чтобы исправить, необхоодимо привязать контекст с помощью bind
+    </p>
+    <script>
+        'use strict';
+        function askPassword(ok, fail) {
+            let password = prompt("Password?", '');
+            if (password == "rockstar") ok();
+            else fail();
+        }
+
+        let user = {
+            name: 'Вася',
+
+            loginOk() {
+                alert(`${this.name} logged in`);
+            },
+
+            loginFail() {
+                alert(`${this.name} failed to log in`);
+            },
+
+        };
+
+        askPassword(user.loginOk.bind(user), user.loginFail.bind(user));
+    </script>
+</body>
+
+</html>

@@ -19,11 +19,15 @@
     <pre><code>
         alert( factorial(5) ); // 120
     </code></pre>
-    <p>
-        P.S. Подсказка: n! можно записать как n * (n-1)! Например: 3! = 3*2! = 3*2*1! = 6
-    </p>
     <script>
+        let num = +prompt('Введите число', 0);
 
+        const factorial = (n) => {
+            if (n === 1) return 1;
+            return n * factorial(n - 1);
+        }
+
+        alert(factorial(num));
     </script>
 </body>
 

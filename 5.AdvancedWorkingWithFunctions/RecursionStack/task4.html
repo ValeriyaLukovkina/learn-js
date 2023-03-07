@@ -40,7 +40,39 @@
     <p>
         Как лучше: с рекурсией или без?
     </p>
+    <p>
+        Ответ: смотря с какой точки зрения смотреть. Елси с точки зрения читаемости кода и его очевидности рекурсивный способ лучше. Но с точки зрения производительности лучше мспособ с использованем цикла, так как в этом случае не тратятся ресурсы на организацию вложенных вызовов
+    </p>
     <script>
+        let list = {
+            value: 1,
+            next: {
+                value: 2,
+                next: {
+                    value: 3,
+                    next: {
+                        value: 4,
+                        next: null
+                    }
+                }
+            }
+        };
+        const printListWithRecursion = (list) => {
+            alert(list.value);
+            if (list.next) {
+                printListWithRecursion(list.next);
+            }
+        }
+        printListWithRecursion(list);
+
+        const printListWithLoop = (list) => {
+            let obj = list;
+            while(obj) {
+                alert(obj.value);
+                obj = obj.next;
+            }
+        }
+        printListWithLoop(list);
     </script>
 </body>
 

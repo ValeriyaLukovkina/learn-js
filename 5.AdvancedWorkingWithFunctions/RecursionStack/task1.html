@@ -39,7 +39,56 @@
     <p>
         P.P.S. Можно ли при помощи рекурсии посчитать sumTo(100000)?
     </p>
+    <p>
+        Ответ: самый быстрый способ это с использованием формулы, так как используется всего несколко математических операций для любого значение, а при использовании цикла или рекурсии требуется количество операций равное числу, сумму которого хотим получить. <br/>
+        Рекурсия - самый медленный вариант, так как требуется организация структуры вызовов и плюс n-количство операции, в случае с циклом требуется просто n-количество операций.<br/>
+        <br/>
+        Нет, с помощью рекурсии нельзя посчитать более 100000, так как движок JS ограничивает максимальную глубину вложенности.
+    </p>
     <script>
+        let num = +prompt('Введите число', 0);
+
+        const sumToLoops = (n) => {
+            let start = performance.now();
+            let sum = 0;
+            for (let i = n; i > 0; i--) {
+                sum += i;
+            }
+            let end = performance.now();
+            let time = end - start;
+            return `Использование цикла. ${sum}. Затраченное время ${time} mcs`;
+        }
+
+        const sumTo = (n) => {
+            if (n === 1) return 1;
+            return n + sumTo(n - 1);
+        }
+
+
+        const sumToRecursion = (n) => {
+            let start = performance.now();
+            let sum = sumTo(n);
+            let end = performance.now();
+            let time = end - start;
+            return `Использование рекурсии. ${sum}. Затраченное время ${time} mcs`;
+        }
+
+        const sumToMath = (n) => {
+            let start = performance.now();
+            const sum = n * (n + 1) / 2
+            let end = performance.now();
+            let time = end - start;
+            return `Использование формулы арифметической прогресии. ${sum}. Затраченное время ${time} mcs`;
+        }
+        alert(sumToLoops(num));
+        alert(sumToMath(num));
+        try {
+            alert(sumToRecursion(num));   
+        } catch (e) {
+            alert('Рекурсия привела к ошибке ' + e)
+        }
+
+
     </script>
 </body>
 

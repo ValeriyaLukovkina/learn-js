@@ -19,16 +19,40 @@
     <p>
         Сделайте два решения: с использованием цикла и через рекурсию.
     </p>
-    <pre><code>
-        let arr = ["HTML", "JavaScript", "CSS"];
-
-        let sorted = copySorted(arr);
-
-        alert( sorted ); // CSS, HTML, JavaScript
-        alert( arr ); // HTML, JavaScript, CSS (без изменений)
-    </code></pre>
     <script>
+        let list = {
+            value: 1,
+            next: {
+                value: 2,
+                next: {
+                    value: 3,
+                    next: {
+                        value: 4,
+                        next: null
+                    }
+                }
+            }
+        };
+        const printListWithRecursion = (list) => {
+            if (list.next) {
+                printListWithRecursion(list.next);
+            }
+            alert(list.value);
+        }
+        printListWithRecursion(list);
 
+        const printListWithLoop = (list) => {
+            let arr = [];
+            let obj = list;
+            while(obj) {
+                arr.push(obj.value);
+                obj = obj.next;
+            }
+            arr.reverse().map(el => {
+                alert(el)
+            })
+        }
+        printListWithLoop(list);
     </script>
 </body>
 

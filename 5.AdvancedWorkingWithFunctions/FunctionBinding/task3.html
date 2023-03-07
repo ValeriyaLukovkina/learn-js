@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Function binding. Task 3</title>
+</head>
+
+<body>
+    <h1>
+        Advanced working with functions
+    </h1>
+    <h2>
+        Function binding
+    </h2>
+    <p>
+        3. В свойство функции записано значение. Изменится ли оно после применения bind? Обоснуйте ответ.
+    </p>
+    <pre><code>
+        function sayHi() {
+            alert( this.name );
+        }
+        sayHi.test = 5;
+          
+        let bound = sayHi.bind({
+            name: "Вася"
+        });
+          
+        alert( bound.test ); // что выведет? почему?
+    </code></pre>
+    <p>
+        Ответ: undefind, так как bind создает новый объект, в котором нет свойства test.
+    </p>
+    <script>
+        function sayHi() {
+            alert( this.name );
+        }
+        sayHi.test = 5;
+          
+        let bound = sayHi.bind({
+            name: "Вася"
+        });
+          
+        alert( bound.test );
+    </script>
+</body>
+
+</html>

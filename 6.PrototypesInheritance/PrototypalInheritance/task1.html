@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prototypal inheritance. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Prototypes, inheritance
+    </h1>
+    <h2>
+        Prototypal inheritance
+    </h2>
+    <p>
+        1. В приведённом ниже коде создаются и изменяются два объекта.<br />
+        Какие значения показываются в процессе выполнения кода?
+    </p>
+    <pre><code>
+        let animal = {
+            jumps: null
+        };
+        let rabbit = {
+            __proto__: animal,
+            jumps: true
+        };
+          
+        alert( rabbit.jumps ); // ? (1)
+          
+        delete rabbit.jumps;
+          
+        alert( rabbit.jumps ); // ? (2)
+          
+        delete animal.jumps;
+          
+        alert( rabbit.jumps ); // ? (3)
+    </code></pre>
+    <p>
+        Ответ: 1. true, 2. null, 3. undefind
+    </p>
+    <script>
+        let animal = {
+            jumps: null
+        };
+        let rabbit = {
+            __proto__: animal,
+            jumps: true
+        };
+
+        alert(rabbit.jumps); // ? (1)
+
+        delete rabbit.jumps;
+
+        alert(rabbit.jumps); // ? (2)
+
+        delete animal.jumps;
+
+        alert(rabbit.jumps); // ? (3)
+    </script>
+</body>
+
+</html>

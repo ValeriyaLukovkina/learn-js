@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Decorators and forwarding, call/apply. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Advanced working with functions
+    </h1>
+    <h2>
+        Decorators and forwarding, call/apply
+    </h2>
+    <p>
+        2. Создайте декоратор delay(f, ms), который задерживает каждый вызов f на ms миллисекунд. Например:
+    </p>
+    <pre><code>
+        function f(x) {
+            alert(x);
+        }
+          
+        // создаём обёртки
+        let f1000 = delay(f, 1000);
+        let f1500 = delay(f, 1500);
+          
+        f1000("test"); // показывает "test" после 1000 мс
+        f1500("test"); // показывает "test" после 1500 мс
+    </code></pre>
+    <p>
+        Другими словами, delay(f, ms) возвращает вариант f с «задержкой на ms мс».<br/>
+        В приведённом выше коде f – функция с одним аргументом, но ваше решение должно передавать все аргументы и контекст this.
+    </p>
+    <script>
+
+    </script>
+</body>
+
+</html>

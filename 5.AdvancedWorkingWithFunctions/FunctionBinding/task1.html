@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Function binding. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Advanced working with functions
+    </h1>
+    <h2>
+        Function binding
+    </h2>
+    <p>
+        1. Что выведет функция?
+    </p>
+    <pre><code>
+        function f() {
+            alert( this ); // ?
+        }
+          
+        let user = {
+            g: f.bind(null)
+        };
+          
+        user.g();
+    </code></pre>
+    <p>
+        Ответ: null, так как строчкой f.bind(null) мы привязали значение null
+    </p>
+    <script>
+        "use strict";
+        function f() {
+            alert(this);
+        }
+
+        let user = {
+            g: f.bind(null)
+        };
+        user.g();
+    </script>
+</body>
+
+</html>

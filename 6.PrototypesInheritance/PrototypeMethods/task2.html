@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Function binding. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Prototypes, inheritance
+    </h1>
+    <h2>
+        Function binding
+    </h2>
+    <p>
+        2. Давайте создадим новый объект rabbit:
+    </p>
+    <pre><code>
+        function Rabbit(name) {
+            this.name = name;
+        }
+        Rabbit.prototype.sayHi = function() {
+            alert(this.name);
+        };
+          
+        let rabbit = new Rabbit("Rabbit");
+    </code></pre>
+    <p>
+        Все эти вызовы делают одно и тоже или нет?
+    </p>
+    <pre><code>
+        rabbit.sayHi();
+        Rabbit.prototype.sayHi();
+        Object.getPrototypeOf(rabbit).sayHi();
+        rabbit.__proto__.sayHi();
+    </code></pre>
+    <p>
+        Ответ: 
+    </p>
+    <ul>
+        <li>rabbit.sayHi() == Rabbit</li>
+        <li>Rabbit.prototype.sayHi() == undefined</li>
+        <li>Object.getPrototypeOf(rabbit).sayHi() == undefined</li>
+        <li>rabbit.__proto__.sayHi() == undefined</li>
+    </ul>
+    <p>
+        Во 2-4 способе this == Rabbit.prototype, а у него нет свойства name и поэтому будет выводиться undefined
+    </p>
+    <script>
+        function Rabbit(name) {
+            this.name = name;
+        }
+        Rabbit.prototype.sayHi = function () {
+            alert(this.name);
+        };
+
+        let rabbit = new Rabbit("Rabbit");
+
+        rabbit.sayHi();
+        Rabbit.prototype.sayHi();
+        Object.getPrototypeOf(rabbit).sayHi();
+        rabbit.__proto__.sayHi();
+    </script>
+</body>
+
+</html>

@@ -27,6 +27,22 @@
         P.S. Подсказка: возможно вам стоит сделать особый метод преобразования в примитив для функции. 
     </p>
     <script>
+        const sum = (num) => {
+            let sum = num;
+            function inSum (num2) {
+                sum += num2;
+                return inSum;
+            }
+            inSum.toString = () => {
+                return sum;
+            }
+            return inSum;
+        }
+        alert( 'sum(1)(2) = ' + sum(1)(2) );
+        alert( 'sum(1)(2)(3) = ' + sum(1)(2)(3) );
+        alert( 'sum(5)(-1)(2) = ' + sum(5)(-1)(2) );
+        alert( 'sum(6)(-1)(-2)(-3) = ' + sum(6)(-1)(-2)(-3) );
+        alert( 'sum(0)(1)(2)(3)(4)(5) = ' + sum(0)(1)(2)(3)(4)(5) );
 
     </script>
 </body>

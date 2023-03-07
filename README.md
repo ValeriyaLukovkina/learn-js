@@ -1,4 +1,5 @@
 ## learn-js
+# Part 1. The JavaScript language
 
 https://valeriyalukovkina.github.io/learn-js
 
@@ -188,3 +189,36 @@ https://valeriyalukovkina.github.io/learn-js
 5.4 Scheduling: setTimeout and setInterval
 - [Output every second](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Scheduling/task1.html);
 - [What will setTimeout show?](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/Scheduling/task2.html);
+
+5.5 Decorators and forwarding, call/apply
+- [Spy decorator](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/CallApply/task1.html);
+- [Delaying decorator](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/CallApply/task2.html);
+- [Debounce decorator](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/CallApply/task3.html);
+- [Throttle decorator](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/CallApply/task4.html);
+
+5.6 Function binding
+- [Bound function as a method](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/FunctionBinding/task1.html);
+- [Second bind](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/FunctionBinding/task2.html);
+- [Function property after bind](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/FunctionBinding/task3.html);
+- [Fix a function that loses "this"](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/FunctionBinding/task4.html);
+- [Partial application for login](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/FunctionBinding/task5.html);
+
+# 6.Advanced working with functions
+
+6.1 Prototypal inheritance
+- [Working with prototype](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/PrototypalInheritance/task1.html);
+- [Searching algorithm](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/PrototypalInheritance/task2.html);
+- [Where does it write?](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/PrototypalInheritance/task3.html);
+- [Why are both hamsters full?](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/PrototypalInheritance/task4.html);
+
+6.2 F.prototype
+- [Changing "prototype"](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/Fprototype/task1.html);
+- [Create an object with the same constructor](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/Fprototype/task2.html);
+
+6.3 Native prototypes
+- [Add method "f.defer(ms)" to functions](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/NativePrototypes/task1.html);
+- [Add the decorating "defer()" to functions](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/NativePrototypes/task2.html);
+
+6.4 Prototype methods, objects without _proto_
+- [Add toString to the dictionary](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/PrototypeMethods/task1.html);
+- [The difference between calls](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/PrototypeMethods/task2.html);

@@ -24,6 +24,29 @@
         <li>Используя рекурсивный setTimeout.</li>
     </ol>
     <script>
+        const printNumbersSetInterval = (from, to) => {
+            let current = from;
+            let id = setInterval(() => {
+                if (current === to) {
+                    clearInterval(id);
+                }
+                alert('setInterval ' + current);
+                current++;
+            }, 1000)
+        }
+        printNumbersSetInterval(5, 10);
+
+        const printNumbersSetTimeout = (from, to) => {
+            let current = from;
+            setTimeout (function next() {
+                if (current < to) {
+                    setTimeout(next, 1000);
+                }
+                alert('setTimeout ' + current)
+                current++
+            }, 1000)
+        }
+        printNumbersSetTimeout(5, 10);
     </script>
 </body>
 

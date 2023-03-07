@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Decorators and forwarding, call/apply. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Advanced working with functions
+    </h1>
+    <h2>
+        Decorators and forwarding, call/apply
+    </h2>
+    <p>
+        1. Создайте декоратор spy(func), который должен возвращать обёртку, которая сохраняет все вызовы функции в своём
+        свойстве calls. <br />
+        Каждый вызов должен сохраняться как массив аргументов.<br />
+        Например:
+    </p>
+    <pre><code>
+        function work(a, b) {
+            alert( a + b ); // произвольная функция или метод
+        }
+          
+        work = spy(work);
+          
+        work(1, 2); // 3
+        work(4, 5); // 9
+          
+        for (let args of work.calls) {
+            alert( 'call:' + args.join() ); // "call:1,2", "call:4,5"
+        }
+    </code></pre>
+    <script>
+        function work(a, b) {
+            alert(a + b);
+        }
+
+        function spy () {
+            let calls = []
+        }
+
+        work = spy(work);
+
+        work(1, 2);
+        work(4, 5);
+
+        for (let args of work.calls) {
+            alert('call:' + args.join());
+        }
+    </script>
+</body>
+
+</html>

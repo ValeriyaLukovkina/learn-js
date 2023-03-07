@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Native prototypes. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Prototypes, inheritance
+    </h1>
+    <h2>
+        Native prototypes
+    </h2>
+    <p>
+        1. Добавьте всем функциям в прототип метод defer(ms), который вызывает функции через ms миллисекунд.<br />
+        После этого должен работать такой код:
+    </p>
+    <pre><code>
+        function f() {
+            alert("Hello!");
+        }
+          
+        f.defer(1000); // выведет "Hello!" через 1 секунду
+    </code></pre>
+    <script>
+        function f() {
+            alert("Hello!");
+        }
+        Function.prototype.defer = function (ms) {
+            setTimeout(this, ms)
+        }
+        f.defer(1000);
+    </script>
+</body>
+
+</html>

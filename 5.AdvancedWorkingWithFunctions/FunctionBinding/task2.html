@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Function binding. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Advanced working with functions
+    </h1>
+    <h2>
+        Function binding
+    </h2>
+    <p>
+        2. Можем ли мы изменить this дополнительным связыванием<br/>
+        Что выведет этот код?   
+    </p>
+    <pre><code>
+        function f() {
+            alert(this.name);
+        }
+          
+        f = f.bind( {name: "Вася"} ).bind( {name: "Петя" } );
+        
+        f();
+    </code></pre>
+    <p>
+        Ответ: Вася, так как нельзя изменить существующую привязку
+    </p>
+    <script>
+        function f() {
+            alert(this.name);
+        }
+          
+        f = f.bind( {name: "Вася"} ).bind( {name: "Петя" } );
+          
+        f();
+    </script>
+</body>
+
+</html>

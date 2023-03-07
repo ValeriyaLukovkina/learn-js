@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Prototypal inheritance. Task 3</title>
+</head>
+
+<body>
+    <h1>
+        Prototypes, inheritance
+    </h1>
+    <h2>
+        Prototypal inheritance
+    </h2>
+    <p>
+        3. Объект rabbit наследует от объекта animal.<br />
+        Какой объект получит свойство full при вызове rabbit.eat(): animal или rabbit?
+    </p>
+    <pre><code>
+        let animal = {
+            eat() {
+              this.full = true;
+            }
+        };
+          
+        let rabbit = {
+            __proto__: animal
+        };
+          
+        rabbit.eat();
+    </code></pre>
+    <p>
+        Ответ: rabbit, так как this является объектом перед точкой, а вызов идет именно от rabbit
+    </p>
+</body>
+
+</html>
