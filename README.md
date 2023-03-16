@@ -203,7 +203,7 @@ https://valeriyalukovkina.github.io/learn-js
 - [Fix a function that loses "this"](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/FunctionBinding/task4.html);
 - [Partial application for login](https://valeriyalukovkina.github.io/learn-js/5.AdvancedWorkingWithFunctions/FunctionBinding/task5.html);
 
-# 6.Advanced working with functions
+# 6. Prototypes, inheritance
 
 6.1 Prototypal inheritance
 - [Working with prototype](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/PrototypalInheritance/task1.html);

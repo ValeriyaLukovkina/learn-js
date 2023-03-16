@@ -14,8 +14,10 @@
         Decorators and forwarding, call/apply
     </h2>
     <p>
-        3. Результатом декоратора debounce(f, ms) должна быть обёртка, которая передаёт вызов f не более одного раза в ms миллисекунд. Другими словами, когда мы вызываем debounce, это гарантирует, что все остальные вызовы будут игнорироваться в течение ms.<br/>
-        Например:        
+        3. Результатом декоратора debounce(f, ms) должна быть обёртка, которая передаёт вызов f не более одного раза в
+        ms миллисекунд. Другими словами, когда мы вызываем debounce, это гарантирует, что все остальные вызовы будут
+        игнорироваться в течение ms.<br />
+        Например:
     </p>
     <pre><code>
         let f = debounce(alert, 1000);
@@ -28,7 +30,27 @@
         setTimeout( () => f(5), 1500); // проигнорирован (прошло только 400 мс от последнего вызова)
     </code></pre>
     <script>
+        function debounce(f, time) {
+            let isBool = false;
+            return function () {
+                if (isBool) {
+                    return;
+                }
+                f.apply(this, arguments);
+                isBool = true;
+                setTimeout(() => {
+                    isBool = false
+                }, time)
+            }
+        }
 
+        let f = debounce(alert, 1000);
+
+        f(1);
+        f(2);
+        setTimeout(() => f(3), 100);
+        setTimeout(() => f(4), 1100);
+        setTimeout(() => f(5), 1500);
     </script>
 </body>
 

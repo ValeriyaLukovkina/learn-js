@@ -14,15 +14,63 @@
         Decorators and forwarding, call/apply
     </h2>
     <p>
-        4. Напишите функцию sum, которая работает таким образом: sum(a)(b) = a+b.<br/>
-        Да, именно таким образом, используя двойные круглые скобки (не опечатка).<br/>
-        Например:
+        4. Создайте «тормозящий» декоратор throttle(f, ms), который возвращает обёртку, передавая вызов в f не более
+        одного раза в ms миллисекунд. Те вызовы, которые попадают в период «торможения», игнорируются.
+    </p>
+    <p>
+        Отличие от debounce – если проигнорированный вызов является последним во время «задержки», то он выполняется в
+        конце.
     </p>
     <pre><code>
-        sum(1)(2) = 3
-        sum(5)(-1) = 4
+        function f(a) {
+            console.log(a)
+        }
+          
+        // f1000 передаёт вызовы f максимум раз в 1000 мс
+        let f1000 = throttle(f, 1000);
+          
+        f1000(1); // показывает 1
+        f1000(2); // (ограничение, 1000 мс ещё нет)
+        f1000(3); // (ограничение, 1000 мс ещё нет)
+          
+        // когда 1000 мс истекли ...
+        // ...выводим 3, промежуточное значение 2 было проигнорировано
     </code></pre>
     <script>
+        function throttle(f, time) {
+            let isBool = false;
+            let tmp;
+            let saveThis;
+
+            function wrapper() {
+                if (isBool) {
+                    tmp = arguments;
+                    saveThis = this;
+                    return;
+                }
+                f.apply(this, arguments);
+                isBool = true;
+
+                setTimeout(function () {
+                    isBool = false;
+                    if (tmp) {
+                        wrapper.apply(saveThis, tmp);
+                        tmp = saveThis = null;
+                    }
+                }, time)
+            }
+            return wrapper
+        }
+
+        function f(a) {
+            alert(a)
+        }
+
+        let f1000 = throttle(f, 1000);
+
+        f1000(1);
+        f1000(2);
+        f1000(3); 
     </script>
 </body>
 
