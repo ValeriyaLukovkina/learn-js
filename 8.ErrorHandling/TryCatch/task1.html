@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Error handling, "try...catch". Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Error handling
+    </h1>
+    <h2>
+        Error handling, "try...catch"
+    </h2>
+    <p>
+        1. Сравните два фрагмента кода.
+    </p>
+    <ol>
+        <li>
+            Первый использует finally для выполнения кода после try..catch:
+            <pre><code>
+    try {
+        начать работу
+        работать
+    } catch (e) {
+        обработать ошибку
+    } finally {
+        очистить рабочее пространство
+    }
+            </code></pre>
+        </li>
+        <li>
+            Второй фрагмент просто ставит очистку после try..catch:
+            <pre><code>
+    try {
+        начать работу
+        работать
+    } catch (e) {
+        обработать ошибку
+    }
+                  
+    очистить рабочее пространство
+            </code></pre>
+        </li>
+    </ol>
+    <script>
+
+        class Clock {
+            constructor({ template }) {
+                this.template = template
+            }
+
+            render() {
+                let date = new Date();
+
+                let hours = date.getHours();
+                if (hours < 10) hours = '0' + hours;
+
+                let mins = date.getMinutes();
+                if (mins < 10) mins = '0' + mins;
+
+                let secs = date.getSeconds();
+                if (secs < 10) secs = '0' + secs;
+
+                let output = this.template
+                    .replace('h', hours)
+                    .replace('m', mins)
+                    .replace('s', secs);
+
+                console.log(output);
+            }
+
+            stop() {
+                clearInterval(this.timer);
+            }
+
+            start() {
+                this.render();
+                this.timer = setInterval(() => this.render(), 1000);
+            };
+        }
+
+        let clock = new Clock({ template: 'h:m:s' });
+        clock.start();
+    </script>
+</body>
+
+</html>

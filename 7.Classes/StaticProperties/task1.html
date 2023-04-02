@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Static properties and methods. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Classes
+    </h1>
+    <h2>
+        Static properties and methods
+    </h2>
+    <p>
+        1. Как мы уже знаем, все объекты наследуют от Object.prototype и имеют доступ к «общим» методам объекта,
+        например hasOwnProperty.
+    </p>
+    <p>
+        Но что если мы явно напишем "class Rabbit extends Object" – тогда результат будет отличаться от обычного "class
+        Rabbit"?
+    </p>
+    <p>Ответ: код не работает, потому в расширяющем классе должен вызываться super, иначе this будет неопределенно.</p>
+    <script>
+
+        class Rabbit extends Object {
+            constructor(name) {
+                super(name);
+                this.name = name;
+            }
+        }
+
+        let rabbit = new Rabbit("Кроль");
+
+        alert(rabbit.hasOwnProperty('name')); 
+    </script>
+</body>
+
+</html>

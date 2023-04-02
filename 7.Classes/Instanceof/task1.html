@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class checking: "instanceof". Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Classes
+    </h1>
+    <h2>
+        Class checking: "instanceof"
+    </h2>
+    <p>
+        1. Почему instanceof в примере ниже возвращает true? Мы же видим, что a не создан с помощью B().
+    </p>
+    <pre><code>
+        function A() {}
+        function B() {}
+
+        A.prototype = B.prototype = {};
+
+        let a = new A();
+
+        alert( a instanceof B ); 
+    </code></pre>
+    <p>Ответ: происходит так потому что в примере явно приравняли прототипы между этоми классами. А instanceof
+        сравнивает именно цепочку прототипов и из-за этого выводится true</p>
+</body>
+
+</html>

@@ -222,3 +222,46 @@ https://valeriyalukovkina.github.io/learn-js
 6.4 Prototype methods, objects without _proto_
 - [Add toString to the dictionary](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/PrototypeMethods/task1.html);
 - [The difference between calls](https://valeriyalukovkina.github.io/learn-js/6.PrototypesInheritance/PrototypeMethods/task2.html);
+
+# 7. Classes
+
+7.1 Class basic syntax
+- [Rewrite to class](https://valeriyalukovkina.github.io/learn-js/7.Classes/Class/task1.html);
+
+7.2 Class inheritance
+- [Error creating an instance](https://valeriyalukovkina.github.io/learn-js/7.Classes/ClassInheritance/task1.html);
+- [Extended clock](https://valeriyalukovkina.github.io/learn-js/7.Classes/ClassInheritance/task2.html);
+
+7.3 Static properties and methods
+- [Class extends Object?](https://valeriyalukovkina.github.io/learn-js/7.Classes/StaticProperties/task1.html);
+
+# 8. Error handling
+
+8.1 Error handling, "try...catch"
+- [Finally or just the code?](https://valeriyalukovkina.github.io/learn-js/8.ErrorHandling/TryCatch/task1.html);
+
+8.2 Custom errors, extending Error
+- [Inherit from SyntaxError](https://valeriyalukovkina.github.io/learn-js/8.ErrorHandling/CustomErrors/task1.html);
+
+# 9. Promises, async/await
+
+9.1 Promise
+- [Re-resolve a promise?](https://valeriyalukovkina.github.io/learn-js/9.Promises/Promise/task1.html);
+- [Delay with a promise](https://valeriyalukovkina.github.io/learn-js/9.Promises/Promise/task2.html);
+- [Animated circle with promise](https://valeriyalukovkina.github.io/learn-js/9.Promises/Promise/task3.html);
+
+9.2 Promises chaining
+- [Promise: then versus catch](https://valeriyalukovkina.github.io/learn-js/9.Promises/PromisesChaining/task1.html);
+
+9.3 Error handling with promises
+- [Error in setTimeout](https://valeriyalukovkina.github.io/learn-js/9.Promises/ErrorHandling/task1.html);
+
+9.4 Async/await
+- [Rewrite using async/await](https://valeriyalukovkina.github.io/learn-js/9.Promises/AsyncAwait/task1.html);
+- [Rewrite "rethrow" with async/await](https://valeriyalukovkina.github.io/learn-js/9.Promises/AsyncAwait/task2.html);
+- [Call async from non-async](https://valeriyalukovkina.github.io/learn-js/9.Promises/AsyncAwait/task3.html);
+
+# 10. Generators, advanced iteration
+
+10.1 Generators
+- [Pseudo-random generator](https://valeriyalukovkina.github.io/learn-js/10.Generators/Generators/task1.html);

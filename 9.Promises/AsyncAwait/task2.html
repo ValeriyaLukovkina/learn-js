@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Promise. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Promises
+    </h1>
+    <h2>
+        Promise
+    </h2>
+    <p>
+        2. Ниже пример из раздела Цепочка промисов, перепишите его, используя async/await вместо .then/catch.
+    </p>
+    <p>
+        В функции demoGithubUser замените рекурсию на цикл: используя async/await, сделать это будет просто.
+    </p>
+    <script>
+        class HttpError extends Error {
+            constructor(response) {
+                super(`${response.status} for ${response.url}`);
+                this.name = 'HttpError';
+                this.response = response;
+            }
+        }
+
+        async function loadJson(url) {
+            let response = await fetch(url);
+            if (response.status == 200) {
+                let json = response.json();
+                return json;
+            }
+            throw new HttpError(response);
+        }
+
+        async function demoGithubUser() {
+            let user;
+            while (true) {
+                let name = prompt("Введите логин?", "iliakan");
+                try {
+                    user = await loadJson(`https://api.github.com/users/${name}`);
+                    break;
+                } catch (err) {
+                    if (err instanceof HttpError && err.response.status == 404) {
+                        alert("Такого пользователя не существует, пожалуйста, повторите ввод.");
+                    } else {
+                        throw err;
+                    }
+                };
+            }
+            alert(`Полное имя: ${user.name}.`);
+            return user;
+        }
+
+        demoGithubUser();
+    </script>
+</body>
+
+</html>

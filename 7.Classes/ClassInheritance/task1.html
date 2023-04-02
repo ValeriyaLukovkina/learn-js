@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class inheritance. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Classes
+    </h1>
+    <h2>
+        Class inheritance
+    </h2>
+    <p>
+        1. В коде ниже класс Rabbit наследует Animal.<br />
+        К сожалению, объект класса Rabbit не создаётся. Что не так? Исправьте ошибку.
+    </p>
+    <p>Ответ: Ошибка в том, что у наследуемого класса должен быть метод super</p>
+    <script>
+
+        class Animal {
+
+            constructor(name) {
+                this.name = name;
+            }
+
+        }
+
+        class Rabbit extends Animal {
+            constructor(name) {
+                super(name)
+                this.created = Date.now();
+            }
+        }
+
+        let rabbit = new Rabbit("Белый кролик");
+        alert(rabbit.name);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Promise. Task 2</title>
+</head>
+
+<body>
+    <h1>
+        Promises
+    </h1>
+    <h2>
+        Promise
+    </h2>
+    <p>
+        2. Встроенная функция setTimeout использует колбэк-функции. Создайте альтернативу, использующую промисы.<br />
+        Функция delay(ms) должна возвращать промис, который перейдёт в состояние «выполнен» через ms миллисекунд, так
+        чтобы мы могли добавить к нему .then:
+    </p>
+    <script>
+
+        function delay(ms) {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => resolve(), ms)
+            })
+        }
+
+        delay(3000).then(() => alert('выполнилось через 3 секунды'));
+    </script>
+</body>
+
+</html>

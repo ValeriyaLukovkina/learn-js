@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Custom errors, extending Error. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Error handling
+    </h1>
+    <h2>
+        Custom errors, extending Error
+    </h2>
+    <p>
+        1. Создайте класс FormatError, который наследует от встроенного класса SyntaxError.<br />
+        Класс должен поддерживать свойства message, name и stack.
+    </p>
+    <p>
+        Пример использования:
+    </p>
+    <pre><code>
+        let err = new FormatError("ошибка форматирования");
+
+        alert( err.message ); // ошибка форматирования
+        alert( err.name ); // FormatError
+        alert( err.stack ); // stack
+
+        alert( err instanceof FormatError ); // true
+        alert( err instanceof SyntaxError ); // true (потому что наследует от SyntaxError)
+    </code></pre>
+    <script>
+        class FormatError extends SyntaxError {
+            constructor(message) {
+                super(message);
+                this.name = 'FormatError';
+            }
+        }
+
+        let err = new FormatError("ошибка форматирования");
+
+        alert(err.message); // ошибка форматирования
+        alert(err.name); // FormatError
+        alert(err.stack); // stack
+
+        alert(err instanceof FormatError); // true
+        alert(err instanceof SyntaxError); // true (потому что наследует от SyntaxError)
+    </script>
+</body>
+
+</html>

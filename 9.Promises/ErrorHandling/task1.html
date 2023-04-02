@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Promises chaining. Task 1</title>
+</head>
+
+<body>
+    <h1>
+        Promises
+    </h1>
+    <h2>
+        Promises chaining
+    </h2>
+    <p>
+        1. Что вы думаете? Выполнится ли .catch? Поясните свой ответ.
+    </p>
+    <pre><code>
+        new Promise(function(resolve, reject) {
+            setTimeout(() => {
+              throw new Error("Whoops!");
+            }, 1000);
+        }).catch(alert);
+    </code></pre>
+    <p>
+        Ответ: нет, не выполнится, так как обрабатываются только синхронные ошибки, а так как ошибка выбрасывается не
+        сразу по выполнению кода, а через какое-то время, то промис не обрабатывает ее
+    </p>
+</body>
+
+</html>

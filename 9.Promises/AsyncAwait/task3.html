@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Promise. Task 3</title>
+</head>
+
+<body>
+    <h1>
+        Promises
+    </h1>
+    <h2>
+        Promise
+    </h2>
+    <p>
+        3. Есть «обычная» функция. Как можно внутри неё получить результат выполнения async–функции?
+    </p>
+    <pre><code>
+        async function wait() {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+          
+            return 10;
+        }
+          
+        function f() {
+            // ...что здесь написать?
+            // чтобы вызвать wait() и дождаться результата "10" от async–функции
+            // не забывайте, здесь нельзя использовать "await"
+        }
+    </code></pre>
+    <p>Ответ:</p>
+    <pre><code>
+        async function wait() {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+          
+            return 10;
+        }
+          
+        function f() {
+            // ...что здесь написать?
+            // чтобы вызвать wait() и дождаться результата "10" от async–функции
+            // не забывайте, здесь нельзя использовать "await"
+        }
+    </code></pre>
+    <p>
+        Ответ: можно использовать '.then'
+    </p>
+    <script>
+        async function wait() {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+          
+            return 10;
+        }
+          
+        function f() {
+            wait().then(res => alert(res))
+        }
+        f()
+    </script>
+</body>
+
+</html>
